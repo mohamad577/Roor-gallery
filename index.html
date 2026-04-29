@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOR GALLERY  - Accueil</title>
+    <style>
+        :root {
+            --roor-pink: #f5a9b8; /* Le rose du logo */
+            --white: #ffffff;
+            --dark-text: #333;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: var(--white);
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+
+        /* Barre de navigation style FC 25 */
+        .fc25-nav {
+            background-color: var(--roor-pink);
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            border-bottom: 4px solid var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-item {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 25px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .nav-item:hover {
+            background-color: var(--white);
+            color: var(--roor-pink);
+            transform: skewX(-10deg); /* Effet dynamique FC 25 */
+        }
+
+        /* En-tête avec Logo */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, var(--roor-pink) 0%, var(--white) 100%);
+        }
+
+        .logo-container img {
+            width: 120px;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-top: 15px;
+            font-size: 1.8rem;
+            color: var(--dark-text);
+        }
+
+        /* Grille des Catégories */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background-color: var(--roor-pink);
+            height: 150px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .category-card:active {
+            transform: scale(0.95);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Bouton + (Admin/Publier) */
+        .admin-add {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--dark-text);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fc25-nav">
+        <a href="#" class="nav-item">ACCUEIL</a>
+        <a href="#" class="nav-item">HAUTS</a>
+        <a href="#" class="nav-item">PANTALONS</a>
+        <a href="#" class="nav-item">SACS</a>
+        <a href="#" class="nav-item">ACCESSOIRES</a>
+    </nav>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/150?text=R" alt="Logo ROOR GALLERY II">
+        </div>
+        <h1>ROOR GALLERY </h1>
+    </header>
+
+    <div class="categories-grid">
+        <a href="#" class="category-card">
+            <span class="category-icon">👕</span>
+            <span>HAUTS</span>
+        </a>
+        <a href="#" class="category-card">
+            <span class="category-icon">👖</span>
+            <span>PANTALONS</span>
+        </a>
+        <a href="#" class="category-card">
+            <span class="category-icon">👜</span>
+            <span>SACS</span>
+        </a>
+        <a href="#" class="category-card">
+            <span class="category-icon">✨</span>
+            <span>ACCESSOIRES</span>
+        </a>
+    </div>
+
+    <div class="admin-add" onclick="alert('Option bientôt disponible pour publier !')">
+        +
+    </div>
+
+</body>
+</html>
